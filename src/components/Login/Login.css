@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+h1{
+    color: #212121;
+}
+#btnSigIn{
+    background-color: #16a085;
+    border: none !important;
+}
+.logincontainer{
+    display: flex;
+    justify-content: center;
+    
+}
+.centerVertical{
+    margin: 0;
+    width: 300px;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  
+}
+#btnSigin{
+    margin-top: 15px;
+}
+.link{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.mrgInputLogin{
+    margin-bottom: 5px;
+}

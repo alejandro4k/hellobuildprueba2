@@ -9,9 +9,9 @@ class ComponentMaster extends Component {
       changeCompt: 0
     };
   }
-  userLogedCompt() {
+  userLogedCompt(value) {
     this.setState({
-      changeCompt: 1
+      changeCompt: value
     });
   }
 
@@ -21,7 +21,7 @@ class ComponentMaster extends Component {
             return <Login userloged={this.userLogedCompt.bind(this)} />;
         break;
         case 1:
-            return <Menu/>
+            return <Menu userloged={this.userLogedCompt.bind(this)}/>
         break;
     
     }

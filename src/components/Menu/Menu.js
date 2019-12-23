@@ -60,7 +60,7 @@ class Menu extends Component {
 
           <ul class="nav flex-column bg-white mb-0">
             <li class="nav-item">
-            <a href="#" class="nav-link text-dark font-italic">
+            <a  class="cursor nav-link text-dark font-italic" onClick={()=> this.props.userloged(0)}>
                 <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
                 Sign Out
               </a>

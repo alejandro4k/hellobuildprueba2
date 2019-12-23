@@ -1,14 +1,28 @@
 import React, { Component } from "react";
 import "./Login.css";
+let formContent;
 class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
       register: 0,
-      userloged: false
+      userloged: false,
+      
     };
   }
+
   componentDidMount() {}
+  onBack(e){
+      e.preventDefault();
+      
+      this.setState({
+          register: 0
+      })
+      var name = document.getElementById("username");
+      name.value = "";
+      var psw = document.getElementById("password");
+      psw.value = "";
+  }
   logInStorage(e) {
     e.preventDefault();
     var name = document.getElementById("username");
@@ -20,7 +34,7 @@ class Login extends Component {
       this.setState({
         userloged: true
       });
-      this.props.userloged();
+      this.props.userloged(1);
     } else {
       alert("user not exist");
     }
@@ -43,7 +57,7 @@ class Login extends Component {
         
                 localStorage.setItem("user", name.value);
                 localStorage.setItem("password", psw.value);
-                this.props.userloged();
+                this.props.userloged(1);
             }else{
                 alert("las contraseñas no coinciden")
             }
@@ -67,7 +81,7 @@ class Login extends Component {
   }
 
   render() {
-    let formContent = <div>
+    formContent = <div>
          <img
                 src="https://media.licdn.com/dms/image/C4E0BAQEilOKrebYwSA/company-logo_200_200/0?e=1585180800&v=beta&t=-hDsbFmedQet2SBBc1yram7JmmRCkuqNUYGkva709NU"
                 alt="..."
@@ -136,6 +150,13 @@ class Login extends Component {
             onClick={e => this.saveDataLocalStorage(e)}
           >
             Save
+          </button>
+          <button
+            id="btnSigIn"
+            className="btn btn-lg btn-primary btn-block"
+            onClick={(e)=> this.onBack(e)}
+          >
+            Back
           </button>
 
           

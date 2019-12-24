@@ -11,7 +11,19 @@ class Login extends Component {
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+
+  }
+  /*
+  componentWillMount(){
+      if(localStorage.getItem("user") != null && localStorage.getItem("password") != null){
+          this.setState({
+              userloged: true
+          })
+          this.props.userloged(1);
+      }
+  }
+  */
   onBack(e){
       e.preventDefault();
       
@@ -29,15 +41,22 @@ class Login extends Component {
     var psw = document.getElementById("password");
     var storedName = localStorage.getItem("user");
     var storedPass = localStorage.getItem("password");
-    if (name.value == storedName && psw.value == storedPass) {
-      
-      this.setState({
-        userloged: true
-      });
-      this.props.userloged(1);
-    } else {
-      alert("user not exist");
+    var formLogin = document.getElementById("formlogin");
+    if(formLogin.checkValidity()){
+
+        if (name.value == storedName && psw.value == storedPass) {
+          
+          this.setState({
+            userloged: true
+          });
+          this.props.userloged(1);
+        } else {
+          alert("incorrect username or password");
+        }
+    }else{
+        formLogin.reportValidity();
     }
+
   }
 
   saveDataLocalStorage(e) {
@@ -49,7 +68,7 @@ class Login extends Component {
         var psw = document.getElementById("password");
         var repeatpassword = document.getElementById("repeatpassword");
         if(localStorage.getItem('user') == name.value){
-            alert("nombre de usuario ya en uso");
+            alert("user not available");
 
         }else{
 
@@ -59,7 +78,7 @@ class Login extends Component {
                 localStorage.setItem("password", psw.value);
                 this.props.userloged(1);
             }else{
-                alert("las contraseñas no coinciden")
+                alert("the password does not match")
             }
         }
     }else{

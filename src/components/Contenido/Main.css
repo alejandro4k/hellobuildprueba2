@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.text-blue{
+    cursor: pointer;
+    color: #3498db !important;
+}
+.txt-white{
+    
+    color: #fff !important;
+}
+.marBottom{
+    margin-bottom: 10px;
+}
+.marBottom2{
+    margin-bottom: 5px;
+}
+
+

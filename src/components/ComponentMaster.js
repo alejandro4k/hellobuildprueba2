@@ -10,14 +10,7 @@ class ComponentMaster extends Component {
       changeCompt: 0
     };
   }
-  componentWillMount(){
-    if(localStorage.getItem("user") != null && localStorage.getItem("password") != null){
-      this.setState({
-        changeCompt:1
-      })
-
-    }
-  }
+ 
   userLogedCompt(value) {
     
     if (value === 0) {

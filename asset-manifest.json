@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/hellobuildprueba2/static/css/main.5e0b4066.chunk.css",
+    "main.js": "/hellobuildprueba2/static/js/main.caf969c2.chunk.js",
+    "main.js.map": "/hellobuildprueba2/static/js/main.caf969c2.chunk.js.map",
+    "runtime-main.js": "/hellobuildprueba2/static/js/runtime-main.6da7d731.js",
+    "runtime-main.js.map": "/hellobuildprueba2/static/js/runtime-main.6da7d731.js.map",
+    "static/js/2.9e245e7a.chunk.js": "/hellobuildprueba2/static/js/2.9e245e7a.chunk.js",
+    "static/js/2.9e245e7a.chunk.js.map": "/hellobuildprueba2/static/js/2.9e245e7a.chunk.js.map",
+    "index.html": "/hellobuildprueba2/index.html",
+    "precache-manifest.a8f1e9eb0de82f52152b190a40fb3900.js": "/hellobuildprueba2/precache-manifest.a8f1e9eb0de82f52152b190a40fb3900.js",
+    "service-worker.js": "/hellobuildprueba2/service-worker.js",
+    "static/css/main.5e0b4066.chunk.css.map": "/hellobuildprueba2/static/css/main.5e0b4066.chunk.css.map",
+    "static/js/2.9e245e7a.chunk.js.LICENSE": "/hellobuildprueba2/static/js/2.9e245e7a.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6da7d731.js",
+    "static/js/2.9e245e7a.chunk.js",
+    "static/css/main.5e0b4066.chunk.css",
+    "static/js/main.caf969c2.chunk.js"
+  ]
+}
